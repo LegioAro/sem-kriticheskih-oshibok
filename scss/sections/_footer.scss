@@ -9,6 +9,7 @@
 
   &__content {
     position: relative;
+    padding-top: 20px;
   }
 
   &__decor {
@@ -68,7 +69,7 @@
     margin-right: 23px;
     position: relative;
 
-    transform: rotate(-1.625deg);
+    // transform: rotate(-1.625deg);
 
     &::before {
       content: '';
