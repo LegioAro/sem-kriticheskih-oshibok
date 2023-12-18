@@ -1,0 +1,147 @@
+.topics {
+  margin-bottom: 100px;
+  &__wrapper {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__contents {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 130px;
+    grid-row-gap: 50px;
+  }
+
+  &__content {
+  }
+
+  &__item {
+    margin-bottom: 80px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 155.556%;
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    b {
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+
+  ul {
+    margin-bottom: 30px;
+    list-style: disc;
+    padding-left: 26px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    li {
+      margin-bottom: 30px;
+      font-size: 18px;
+      line-height: 155.556%;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__item-title {
+    padding: 18px 65px;
+    border-radius: 10px;
+    border: 1px solid #d1d1d1;
+    margin-bottom: 40px;
+    min-height: 97px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    color: #906718;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px; /* 125% */
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 23px;
+      height: 1px;
+      background-color: #f8d068;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &::before {
+      left: 32px;
+    }
+    &::after {
+      right: 32px;
+    }
+  }
+
+  &__btn {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .topics {
+    &__contents {
+      grid-column-gap: 60px;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .topics {
+    &__contents {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__item {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .topics {
+    margin-bottom: 70px;
+    &__item-title {
+      font-size: 20px;
+      padding: 14px 65px;
+      margin-bottom: 30px;
+    }
+    &__item {
+      p,
+      ul,
+      ul li {
+        margin-bottom: 15px;
+      }
+    }
+    &__btn {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .topics {
+    &__item-title {
+      padding: 16px 20px;
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
